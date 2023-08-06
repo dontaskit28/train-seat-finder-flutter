@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
         });
         scrollController.scrollTo(
           // Scroll to the appropriate cabin based on the seat index.
-          index: (num.parse(searchController.text) / 8).floor() - 1,
+          index: (num.parse(searchController.text) / 8).ceil() - 1,
           duration: const Duration(milliseconds: 500),
           curve: Curves.easeInOut,
         );
